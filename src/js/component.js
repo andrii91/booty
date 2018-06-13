@@ -75,13 +75,46 @@ $(document).ready(function () {
       $('.section_2').addClass('fixbottom');
     }
   });
-  
+/*  
       var feed = new Instafeed({
         get: 'tagged',
         tagName: 'awesome',
         clientId: '4334f407e89e4cafad556fd01034b1ab'
     });
-    feed.run();
+    feed.run();*/
   
+var tok = '7217942046.4334f40.a1898862e9a2400c92af7b91e792842a',
+    username = '7217942046', // имя пользователя
+    kolichestvo = 4;
+ 
+$.ajax({ // первый ajax запрос возвратит нам ID пользователя
+	url: 'https://api.instagram.com/v1/users/search',
+	dataType: 'jsonp',
+	type: 'GET',
+	data: {access_token: tok, q: username}, // по сути это просто поиск пользователя по его имени
+	success: function(result){
+		console.log(result);
+		$.ajax({
+			url: 'https://api.instagram.com/v1/users/' + result.data[0].id + '/media/recent', // указываем ID первого найденного
+			dataType: 'jsonp',
+			type: 'GET',
+			data: {access_token: tok, count: kolichestvo},
+			success: function(result2){
+				console.log(result2);
+				for(x in result2.data){
+					$('ul').append('<li><img src="'+result2.data[x].images.thumbnail.url+'"></li>');  
+				}
+    			},
+			error: function(result2){
+				console.log(result2);
+			}
+		});
+	},
+	error: function(result){
+		console.log(result);
+	}
+});
 
+  
+  
 });
