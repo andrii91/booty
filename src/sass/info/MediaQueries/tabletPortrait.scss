@@ -3,6 +3,14 @@
 @media #{$tabletPortrait} {
     @import '../mobile';
   	& {
-     
+      .container {
+        max-width: 560px;
+      }
+      .social-fixed {
+        display: block;
+      }
+      .about-item, .reviews-item {
+        max-width: 100%;
+      }
 	}
 }

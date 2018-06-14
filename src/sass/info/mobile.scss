@@ -1,3 +1,212 @@
 & {
+  main {
+    overflow: hidden;
+  }
+  .head {
+    padding-top: 100px;
+    padding-bottom: 70px;
+    background: url(../images/bg1.png) no-repeat left bottom;
+    background-size: cover;
+    text-align: center;
+  }
+  .head-title h1 {
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  .head-title p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .head-item .video {
+    display: inline-block;
+  }
+  .social-fixed {
+    display: none;
+  }
+  h2.title {
+    margin-top: 0 !important;
+    margin-bottom: 20px !important;
+    font-size: 32px !important;
+    line-height: 1.2;
+    br {
+      display: none;
+    }
+  }
+  .fancybox-slide {
+    padding: 0;
+  }
+  .section_1 {
+    br {
+      display: none;
+    }
+  }
+  .quote {
+    margin-top: 55px;
+    padding: 34px 30px 54px 30px;
+    margin-bottom: 25px;
+  }
+  .section_1-bottom {
+    padding-left: 0;
+  }
+  .section_1-img {
+    display: none;
+  }
+  .section_2-img img {
+    height: inherit;
+    width: 100%;
+  }
+  .section_2 {
+    padding-top: 0;
+    br {
+      display: none;
+    }
+  }
+  .how_it_works {
+    padding: 50px 0;
+    margin-top: 50px;
+  }
+  .how_it_works .how_it_works-item {
+    margin-top: 20px;
+  }
+  .how_it_works .how_it_works-item:before {
+    left: 20px;
+  }
+
+  .how_it_works .how_it_works-item {
+    border-radius: 8px;
+    border: 2px solid #f1eade;
+    background: 0 0;
+    padding: 32px 10px 32px 80px;
+  }
+  .how_it_works-bottom {
+    margin-top: 30px;
+    p {
+      margin-bottom: 20px;
+    }
+  }
+  .about {
+    padding: 50px 0;
+    br {
+      display: none;
+    }
+  }
+  .about-carousel {
+    margin-top: 10px;
+  }
+  .reviews-item {
+    br {
+      display: none;
+    }
+  }
+  .reviews-carousel {
+    .row {
+      .row {
+        margin: 0;
+      }
+    }
+    .col-6 {
+      padding: 0;
+    }
+  }
+  .reviews-carousel .owl-nav {
+    position: static;
+    text-align: center;
+    width: 100%;
+    margin-top: 10px;
+    button {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    .owl-prev {
+      margin-right: 30px;
+    }
+    
+  }
+  .reviews {
+    padding-bottom: 50px;
+  }
+  .programs {
+    padding: 50px 0;
+    br {
+      display: none;
+    }
+  }
+  .programs-item h4 {
+    padding: 24px 20px;
+    font-size: 21px;
+    line-height: 1.2;
+    margin-bottom: 30px;
+  }
+  .programs-item .bottom {
+    padding: 0 20px;
+  }
   
+  .xs-first {
+    -ms-flex-order: -1;
+    order: -1;
+}
+  .programs-item .price {
+    text-align: center;
+    margin: 20px 0;
+  }
+  .note {
+    max-width: 100%;
+   margin-bottom: 30px;
+  }
+  .faq {
+    padding: 50px 0;
+  }
+  .faq-item h4 {
+    font-size: 14px;
+    line-height: 1.2;
+  }
+  .questions {
+    padding: 50px 0;
+    background-position: right;
+  }
+  .form h4 {
+    padding: 20px;
+    line-height: 1.2;
+    margin-bottom: 20px;
+  }
+  .form .bottom {
+    padding: 0 20px 20px;
+}
+  .footer {
+    text-align: center;
+    .social {
+      float: none;
+      li {
+        &:last-child {
+          margin-right: 0;
+          svg {
+            width: 50px;
+          }
+        }
+         svg {
+            fill: #333;
+            width: 40px;
+            height: inherit;
+        }
+      }
+    }
+  }
+  .footer-list {
+    li {
+      display: block;
+      margin: 10px 0;
+    }
+  }
+  .footer_bottom {
+    text-align: center;
+    .rezart-logo {
+      float: none;
+    }
+  }
+  .head-item p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
 }
