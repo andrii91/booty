@@ -3,7 +3,7 @@
 @media #{$tabletPortrait} {
     @import '../mobile';
   	& {
-      .container {
+      .container, .reviews .container {
         max-width: 560px;
       }
       .social-fixed {
@@ -11,6 +11,24 @@
       }
       .about-item, .reviews-item {
         max-width: 100%;
+      }
+      .head {
+        text-align: left;
+            background: url(../images/bg1.png) no-repeat 39% bottom;
+        background-size: cover;
+        min-height: inherit;
+        .container {
+          max-width: 95%;
+        }
+        .head-title p, .head-item p {
+          margin: 0;
+        }
+      }
+      .social-fixed {
+        display: none;
+        &.fixed {
+          display: block;
+        }
       }
 	}
 }

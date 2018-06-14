@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  $('.program-btn').click(function (e) {
+  $('.program-btn, .nav-button').click(function (e) {
     event.preventDefault();
     var id = $(this).attr('href'),
       top = $(id).offset().top;
@@ -11,13 +11,13 @@ $(document).ready(function () {
 
   });
 
- 
+      $(window).scroll(function () {
+    return $('nav, .social-fixed').toggleClass("fixed", $(window).scrollTop() > $('.head').height());
+  });
 
   if ($(window).width() > 1200) {
     
-     $(window).scroll(function () {
-    return $('nav, .social-fixed').toggleClass("fixed", $(window).scrollTop() > $('.head').height());
-  });
+
     $('.section_1').viewportChecker({
       classToAdd: 'visible', // Class to add to the elements when they are visible,
       classToAddForFullView: 'full-visible', // Class to add when an item is completely visible in the viewport
@@ -87,9 +87,12 @@ $(document).ready(function () {
     items: 4,
     loop: true,
     margin: 30,
+     autoplay:true,
+    autoplayTimeout:3000,
+        autoplayHoverPause:true,
     responsive: {
       0: {
-        items: 2
+        items: 1
       },
       600: {
         items: 4
@@ -115,6 +118,7 @@ $(document).ready(function () {
   
   $('.order-btn').click(function(){
     $('#reg input[name="orderType"]').val('Nastya_Nass_'+$(this).parents('.programs-item').find('h4 span').text());
+    $('#reg h4').text($(this).parents('.programs-item').find('h4').text());
   })
 
   
@@ -179,7 +183,7 @@ $(document).ready(function () {
           var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
           if (!pattern.test($(this).val())) {
             $("input[name=email]").val('');
-            $(this).addClass('error').parent('span').append('<div class="allert"><p>Please enter a valid e-mail</p>' + alertImage + '</div>');
+            $(this).addClass('error').parent('span').append('<div class="allert"><p>Enter your best e-mail</p>' + alertImage + '</div>');
             error = 1;
             $(":input.error:first").focus();
           }
@@ -191,8 +195,16 @@ $(document).ready(function () {
             error = 1;
             $(":input.error:first").focus();
           }
+        }  else if ($(this).attr("name") == 'mess') {
+          var patterntel = /^()[- +()0-9]{9,18}/i;
+          if (!patterntel.test($(this).val())) {
+            $("input[name=phone]").val('');
+            $(this).addClass('error').parent('span').append('<div class="allert"><p>Wright your questuion</p>' + alertImage + '</div>');
+            error = 1;
+            $(":input.error:first").focus();
+          }
         } else {
-          $(this).addClass('error').parent('span').append('<div class="allert"><p>Fill this field</p>' + alertImage + '</div>');
+          $(this).addClass('error').parent('span').append('<div class="allert"><p>Fill in the field</p>' + alertImage + '</div>');
           error = 1;
           $(":input.error:first").focus();
         }

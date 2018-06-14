@@ -33,7 +33,7 @@
     }
   }
   .fancybox-slide {
-    padding: 0;
+    padding: 0 10px;
   }
   .section_1 {
     br {
@@ -43,7 +43,7 @@
   .quote {
     margin-top: 55px;
     padding: 34px 30px 54px 30px;
-    margin-bottom: 25px;
+    margin-bottom: 55px;
   }
   .section_1-bottom {
     padding-left: 0;
@@ -56,7 +56,7 @@
     width: 100%;
   }
   .section_2 {
-    padding-top: 0;
+    padding-top: 50px;
     br {
       display: none;
     }
@@ -70,6 +70,12 @@
   }
   .how_it_works .how_it_works-item:before {
     left: 20px;
+  }
+  .section_2-quote:before {
+    left: 0;
+  }
+  .section_2-quote{
+    padding-left: 40px;
   }
 
   .how_it_works .how_it_works-item {
@@ -100,13 +106,17 @@
   }
   .reviews-carousel {
     .row {
-      .row {
         margin: 0;
+      .row {
       }
     }
     .col-6 {
+      padding: 5px;
+    }
+    .col-xl-7 {
       padding: 0;
     }
+    
   }
   .reviews-carousel .owl-nav {
     position: static;
@@ -158,6 +168,7 @@
   }
   .faq-item h4 {
     font-size: 14px;
+    min-height: 32px;
     line-height: 1.2;
   }
   .questions {
@@ -168,9 +179,10 @@
     padding: 20px;
     line-height: 1.2;
     margin-bottom: 20px;
+    padding-top: 40px;
   }
   .form .bottom {
-    padding: 0 20px 20px;
+    padding: 0 20px 40px;
 }
   .footer {
     text-align: center;
@@ -208,5 +220,36 @@
     margin-right: auto;
   }
 
+  nav {
+    &.fixed {
+      z-index: 99;
+      background: #fff;
+    }
+  }
 
+  #reg .form .bottom form span span {
+    padding: 0;
+    text-align: center;
+  }
+  .fancybox-close-small {
+    right: 0;
+  }
+  .reviews .container {
+    padding-left: 15px;
+    .col {
+      padding: 0;
+    }
+    .title {
+      padding: 0 15px;
+    }
+  }
+  .reviews-item {
+    padding-right: 15px;
+  }
+  .mob-img {
+    display: block;
+    img {
+      width: 100%;
+    }
+  }
 }

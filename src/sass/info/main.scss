@@ -23,11 +23,13 @@ nav {
   &.fixed {
     position: fixed;
     .nav-logo {
+      text-shadow: 2px 2px 8px #fff;
       color: #000;
     }
     .nav-button {
       background-color: #ffc400;
       transition: 0.5s;
+      color: #333;
       &:hover {
         transform: scale(0.9)
       }
@@ -122,6 +124,7 @@ nav {
   &.fixed {
     position: fixed;
     z-index: 99;
+    text-shadow: 2px 2px 8px #fff;
     &:before {
       color: #000;
     }
@@ -130,8 +133,19 @@ nav {
     }
     li {
       a {
+        transition: 0.4s;
+        display: block;
+        
+        &:hover {
+          transform: scale(1.3);
+        }
         svg {
+          box-shadow: 2px 2px 8px #fff;
+          border-radius: 8px;
           fill: #000;
+          path {
+            
+          }
         }
       }
     }
@@ -237,6 +251,8 @@ background-color: #ffc400;
 }
   &:hover {
     color: #fff;
+        transition: all .5s linear;
+    box-shadow: 0 5px 27px 0 #fc0;
   }
   &:hover:before, &:focus:before, &:active:before {
     -webkit-transform: scale(2);
@@ -266,7 +282,25 @@ background-color: #ffc400;
   .video {
     margin-top: 6.5vw;
     position: relative;
-    
+    cursor: pointer;
+    width: 225px;
+    height: 150px;
+    span {
+      display: block;
+      overflow: hidden;
+    }
+    img {
+      transition: 0.4s;
+      
+    }
+    &:hover {
+      img {
+        transform: scale(1.2);
+      }
+      .play-btn {
+         transform: translateY(-50%) scale(0.9);
+      }
+    }
   }
 }
 
@@ -945,6 +979,7 @@ height: 15px;
       }
       &:hover, &:focus {
         color: #333333;
+        
       }
     }
   }
@@ -1077,6 +1112,8 @@ height: 15px;
 }
   &:hover {
     color: #fff;
+        transition: all .5s linear;
+    box-shadow: 0 5px 27px 0 #fc0;
   }
   &:hover:before, &:focus:before, &:active:before {
     -webkit-transform: scale(2);
@@ -1189,7 +1226,7 @@ height: 15px;
     font-family: Poppins;
     font-size: 25px;
     font-weight: 700;
-    line-height: 60px;
+    line-height: 1.2;
     margin-bottom: 50px;
   }
   .bottom {
@@ -1272,6 +1309,8 @@ height: 15px;
   &:hover,&:focus {
     color: #fff;
     outline: 0;
+        transition: all .5s linear;
+    box-shadow: 0 5px 27px 0 #fc0;
   }
   &:hover:before, &:focus:before, &:active:before {
     -webkit-transform: scale(2);
@@ -1385,6 +1424,7 @@ background-color: #121212;
   position: relative;
   margin: 0 auto;
   padding: 5vw;
+
 }
 
 .modal {
@@ -1394,6 +1434,9 @@ background-color: #121212;
   background:  0 0;
   max-width: 554px;
   width: 100%;
+   .form h4 {
+    text-align: center;
+  }
 }
 
 
@@ -1435,4 +1478,8 @@ background-color: #121212;
       }
     }
   }
+}
+
+.mob-img {
+  display: none;
 }
