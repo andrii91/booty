@@ -1012,5 +1012,56 @@ body.compensate-for-scrollbar {
   .owl-carousel .owl-item img.owl-lazy {
     transform-style: preserve-3d; }
 
+
+.allert svg {
+   width: 15px;
+}
+
+.allert p {
+   display: none;
+   opacity: 0;
+   padding: 5px;
+   margin-left: 5px;
+   line-height: 14px;
+   color: #000;
+   font-style: italic;
+   font-size: 13px;
+   -webkit-border-radius: 4px;
+   border-radius: 4px;
+   -webkit-transition: all 0.5s;
+   transition: all 0.5s;
+   min-width: 140px;
+   text-align: center;
+}
+
+.allert:hover p {
+   border: 1px solid #ff6565;
+   background: #fff;
+   display: inline;
+   position: absolute;
+   color: #4e4e4e;
+    font-size: 10px;
+   right: 24px;
+   top: -7px;
+   opacity: 1
+}
+
+.form span {
+   position: relative;
+}
+
+.allert {
+   position: absolute;
+   z-index: 20;
+   top: 50%;
+   display: block;
+   right: 5px;
+   height: 20px;
+   width: 20px;
+   color: #ff6565;
+   cursor: default;
+   transform: translateY(-50%);
+}
+
 @import 'info/bootstrap';
 @import 'info/main';

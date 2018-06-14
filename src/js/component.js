@@ -179,7 +179,7 @@ $(document).ready(function () {
           var pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
           if (!pattern.test($(this).val())) {
             $("input[name=email]").val('');
-            $(this).addClass('error').parent('span').append('<div class="allert"><p>Укажите коректный e-mail</p>' + alertImage + '</div>');
+            $(this).addClass('error').parent('span').append('<div class="allert"><p>Please enter a valid e-mail</p>' + alertImage + '</div>');
             error = 1;
             $(":input.error:first").focus();
           }
@@ -187,12 +187,12 @@ $(document).ready(function () {
           var patterntel = /^()[- +()0-9]{9,18}/i;
           if (!patterntel.test($(this).val())) {
             $("input[name=phone]").val('');
-            $(this).addClass('error').parent('span').append('<div class="allert"><p>Укажите номер телефона в формате +3809999999</p>' + alertImage + '</div>');
+            $(this).addClass('error').parent('span').append('<div class="allert"><p>Enter the phone number in the format +3809999999</p>' + alertImage + '</div>');
             error = 1;
             $(":input.error:first").focus();
           }
         } else {
-          $(this).addClass('error').parent('span').append('<div class="allert"><p>Заполните это поле</p>' + alertImage + '</div>');
+          $(this).addClass('error').parent('span').append('<div class="allert"><p>Fill this field</p>' + alertImage + '</div>');
           error = 1;
           $(":input.error:first").focus();
         }
