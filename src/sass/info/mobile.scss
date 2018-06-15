@@ -245,11 +245,15 @@
   }
   .reviews-item {
     padding-right: 15px;
+    padding-left: 30px;
   }
   .mob-img {
     display: block;
     img {
       width: 100%;
     }
+  }
+  nav.fixed .nav-logo {
+    padding: 0;
   }
 }
