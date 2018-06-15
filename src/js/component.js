@@ -11,13 +11,18 @@ $(document).ready(function () {
 
   });
 
-      $(window).scroll(function () {
+  $(window).scroll(function () {
     return $('nav, .social-fixed').toggleClass("fixed", $(window).scrollTop() > $('.head').height());
   });
 
   if ($(window).width() > 1200) {
-    
 
+    setTimeout(function () {
+      $('.reviews-item').css({
+        'max-height': $('.reviews-img').height(),
+      })
+
+    }, 1000)
     $('.section_1').viewportChecker({
       classToAdd: 'visible', // Class to add to the elements when they are visible,
       classToAddForFullView: 'full-visible', // Class to add when an item is completely visible in the viewport
@@ -87,9 +92,10 @@ $(document).ready(function () {
     items: 4,
     loop: true,
     margin: 30,
-     autoplay:true,
-    autoplayTimeout:3000,
-        autoplayHoverPause:true,
+    autoplay: true,
+    autoplayTimeout: 4000,
+    autoplaySpeed: 2000,
+    autoplayHoverPause: true,
     responsive: {
       0: {
         items: 1
@@ -106,7 +112,7 @@ $(document).ready(function () {
     nav: true,
     items: 1,
     loop: true,
-    margin: 0,
+    margin: 5,
     animateOut: 'fadeOut',
     animateIn: 'fadeIn'
   });
@@ -115,13 +121,14 @@ $(document).ready(function () {
     $(this).toggleClass('active');
     $(this).find('.more').slideToggle(400);
   });
-  
-  $('.order-btn').click(function(){
-    $('#reg input[name="orderType"]').val('Nastya_Nass_'+$(this).parents('.programs-item').find('h4 span').text());
+
+  $('.order-btn').click(function () {
+    $('#reg input[name="orderType"]').val('Nastya_Nass_' + $(this).parents('.programs-item').find('h4 span').text());
     $('#reg h4').text($(this).parents('.programs-item').find('h4').text());
   })
 
-  
+
+
   function getUrlVars() {
     var vars = {};
     var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
@@ -195,7 +202,7 @@ $(document).ready(function () {
             error = 1;
             $(":input.error:first").focus();
           }
-        }  else if ($(this).attr("name") == 'mess') {
+        } else if ($(this).attr("name") == 'mess') {
           var patterntel = /^()[- +()0-9]{9,18}/i;
           if (!patterntel.test($(this).val())) {
             $("input[name=phone]").val('');
@@ -236,7 +243,7 @@ $(document).ready(function () {
       success: function (response) {}
     });
 
-  
+
 
     setTimeout(function () {
       window.location.href = "success.html";
