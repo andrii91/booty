@@ -19,7 +19,7 @@ $(document).ready(function () {
 
     setTimeout(function () {
       $('.reviews-item').css({
-        'max-height': $('.reviews-img').height(),
+        'max-height': $('.reviews-img').height()-30,
       })
 
     }, 1000)
